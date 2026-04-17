@@ -1,7 +1,8 @@
 name: Build and Deploy static site
 on:
   push:
-    branches: [main]
+    branches: [main, codespace-expert-funicular-97v5gv7545qv2r7x]
+  workflow_dispatch: {}
 permissions:
   contents: read
   pages: write
