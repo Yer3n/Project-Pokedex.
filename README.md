@@ -1,13 +1,38 @@
-# GitHub Codespaces ♥️ Flask
+# Matrix Pokédex
 
-Welcome to your shiny new Codespace running Flask! We've got everything fired up and running for you to explore Flask.
+Matrix Pokédex is a browser-based Pokédex built with Flask and static front-end assets. It turns a familiar Pokémon search experience into a fast, responsive interface with smart search, random discovery, favorites, and history.
 
-You've got a blank canvas to work on from a git perspective as well. There's a single initial commit with the what you're seeing right now - where you go from here is up to you!
+## What this browser does
 
-Everything you do here is contained within this one codespace. There is no repository on GitHub yet. If and when you’re ready you can click "Publish Branch" and we’ll create your repository and push up your project. If you were just exploring then and have no further need for this code then you can simply delete your codespace and it's gone forever.
+This app is a complete Pokémon lookup tool that runs in the browser and loads data from the PokéAPI. It includes:
 
-To run this application:
+- **Search by name**: type any Pokémon name and fetch its profile instantly.
+- **Randomizer**: click the Randomize button to display a random Pokémon from the National Dex.
+- **Full battle stats**: view HP, Attack, Defense, Special Attack, Special Defense, and Speed.
+- **Pokédex details**: see each Pokémon’s National Number, height, weight, and growth rate.
+- **Favorites**: mark Pokémon you like and keep them in a personal collection.
+- **Search history**: revisit recent searches and remove entries you no longer want.
+- **Responsive layout**: mobile-friendly design with horizontally scrollable stat cards.
 
-```
-flask --debug run
-```
+## Why it’s useful
+
+Matrix Pokédex is designed for fast reference and discovery. It is especially useful when you want to:
+
+- compare base stats quickly
+- explore new Pokémon with the Randomizer
+- keep a list of favorite Pokémon in the browser
+- access quick details without leaving the page
+
+## Built with
+
+- Python
+- Flask
+- Frozen-Flask for static export
+- GitHub Actions for deployment to GitHub Pages
+
+## Notes
+
+- The app uses client-side session storage for favorites and login state.
+- The static export is generated with `freeze.py` and can be deployed directly to GitHub Pages.
+
+Enjoy your Pokémon browsing experience!
