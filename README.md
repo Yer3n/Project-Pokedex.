@@ -1,6 +1,6 @@
-# Matrix Pokédex
+# Pokédex
 
-Matrix Pokédex is a browser-based Pokédex built with Flask and static front-end assets. It turns a familiar Pokémon search experience into a fast, responsive interface with smart search, random discovery, favorites, and history.
+This Pokédex is a browser-based Pokédex built with Flask and static front-end assets. It turns a familiar Pokémon search experience into a fast, responsive interface with smart search, random discovery, favorites, and history.
 
 ## What this browser does
 
@@ -16,7 +16,7 @@ This app is a complete Pokémon lookup tool that runs in the browser and loads d
 
 ## Why it’s useful
 
-Matrix Pokédex is designed for fast reference and discovery. It is especially useful when you want to:
+This Pokédex is designed for fast reference and discovery. It is especially useful when you want to:
 
 - compare base stats quickly
 - explore new Pokémon with the Randomizer
