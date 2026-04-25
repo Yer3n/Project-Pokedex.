@@ -280,6 +280,10 @@
             position: relative;
         }
 
+        .results-card:not(.empty):not(.loading):not(.error) {
+            cursor: pointer;
+        }
+
         .favorite-button {
             position: absolute;
             top: 18px;
@@ -1148,6 +1152,7 @@
 
         const closeDetailView = () => {
             detailView.classList.remove('visible');
+            detailView.classList.add('hidden');
             detailView.setAttribute('aria-hidden', 'true');
             detailContent.innerHTML = '';
         };
@@ -1197,7 +1202,7 @@
                         <h2 id="detail-title" class="detail-title">${capitalize(detail.name)}</h2>
                         <p class="detail-subtitle">Full Pokémon details and evolution chain</p>
                         <div class="detail-types">
-                            ${types.map((type) => `<span class="detail-type-pill" style="background:${type.color};">${type.name}</span>`).join('')}
+                            ${types.map((type) => `<span class="type-pill" style="background:${type.color};">${type.name}</span>`).join('')}
                         </div>
                     </div>
                 </div>
@@ -1244,6 +1249,7 @@
 
         const openDetailView = async () => {
             if (!currentPokemon) return;
+            detailView.classList.remove('hidden');
             detailView.classList.add('visible');
             detailView.setAttribute('aria-hidden', 'false');
             renderDetailLoading();
@@ -1269,6 +1275,12 @@
             if (!event.target.closest('.detail-card')) {
                 closeDetailView();
             }
+        });
+
+        results.addEventListener('click', (event) => {
+            if (event.target.closest('.favorite-button')) return;
+            if (results.classList.contains('empty') || results.classList.contains('loading') || results.classList.contains('error')) return;
+            openDetailView();
         });
 
         const authScreen = document.getElementById('auth-screen');
